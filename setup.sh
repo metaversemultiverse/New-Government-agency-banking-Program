@@ -4,7 +4,9 @@
 mkdir modern_treasury
 cd modern_treasury
 
-# Create subfolders
+
+
+# Create subfolder
 mkdir -p modern_treasury/gui
 mkdir -p modern_treasury/gui/assets
 mkdir -p stripe
