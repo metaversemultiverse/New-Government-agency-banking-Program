@@ -20,7 +20,7 @@ on:
     - cron: '41 19 * * 3'
 
 permissions:
-  contents: read
+  contents: write
 
 jobs:
   clj-holmes:
