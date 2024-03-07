@@ -21,6 +21,18 @@ on:
 
 permissions:
   contents: write
+  actions: write
+  checks: write
+  deployments: write
+  discussions: write
+  issues: write
+  packages: write
+  pages: write
+  repository-projects: write
+  pull-requests: write
+  security-events: write
+  statuses: write
+  id-token: write
 
 jobs:
   clj-holmes:
