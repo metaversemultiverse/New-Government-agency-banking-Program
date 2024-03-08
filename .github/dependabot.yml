@@ -1,0 +1,91 @@
+# To get started with Dependabot version updates, you'll need to specify which
+# package ecosystems to update and where the package manifests are located.
+# Please see the documentation for all configuration options:
+# https://docs.github.com/code-security/dependabot/dependabot-version-updates/configuration-options-for-the-dependabot.yml-file
+
+version: 2
+updates:
+
+  - package-ecosystem: "npm"
+    directory: "/"
+    schedule:
+      interval: "daily"
+      time: "10:00"
+      timezone: "America/New_York"
+      day: "monday"
+    open-pull-requests-limit: 10
+    target-branch: "develop"
+    assignees:
+      - "octocat"
+    labels:
+      - "dependencies"
+
+  - package-ecosystem: "pip"
+    directory: "/src"
+    schedule:
+      interval: "weekly"
+      day: "wednesday"
+    open-pull-requests-limit: 5
+    reviewers: 
+      - "team-reviewers"
+
+  - package-ecosystem: "maven"
+    directory: "/java/src"
+    schedule:
+      interval: "monthly"
+    labels:
+      - "java"
+      - "maven"
+    milestone: "sprint-15"
+
+  - package-ecosystem: "rubygems"
+    directory: "/ruby/lib" 
+    schedule:
+      interval: "weekly"
+      time: "11:00"
+    open-pull-requests-limit: 3
+    assignees: 
+      - "ruby-dev"
+
+  - package-ecosystem: "docker"
+    directory: "/"
+    schedule:
+      interval: "daily"
+      time: "03:00"
+    labels:
+      - "docker"
+      - "container"
+
+  - package-ecosystem: "github-actions"
+    directory: "/.github/workflows/"
+    schedule:  
+      interval: "weekly"
+      day: "friday"
+    open-pull-requests-limit: 10
+    reviewers:
+      - "actions-dev"
+    labels:
+      - "actions"
+      - "workflows"
+
+  - package-ecosystem: "terraform"
+    directory: "/infra/"
+    schedule:
+      interval: "monthly"
+    assignees:
+      - "infra-team"
+
+  - package-ecosystem: "composer"
+    directory: "/php/"
+    schedule:
+      interval: "weekly"
+      day: "tuesday"
+    open-pull-requests-limit: 5
+
+  - package-ecosystem: "nuget"
+    directory: "/csharp/src/"
+    schedule:
+      interval: "weekly"
+    labels:
+      - "csharp"
+      - ".net"
