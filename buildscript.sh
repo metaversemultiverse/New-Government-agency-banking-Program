@@ -1,5 +1,4 @@
-```bash
-#!/bin/bash
+# !/bin/bash
 
 # Exit on first error
 set -e
@@ -37,7 +36,7 @@ else
 fi
 
 echo "Build successful."
-```
+
 
 ### How It Works:
 
