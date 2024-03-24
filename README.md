@@ -6,8 +6,8 @@ The <span style="color: #FFA500;">**Government Operations and Financial Accounti
 
 The <span style="color: #FFA500;">**Government Operations and Financial Accounting Platform (GOFAP)**</span> enables seamless and automated management critical financial processes including:
 
-- 💳 **Digital Account Creation**   
-  Create and configure bank accounts instantly through integrations with platforms like [ModernTreasury.com](http://moderntreasury.com) [Stripe.com](http://stripe.com), [SolidFi.com](http://solidfi.com) and [Unit.co](http://unit.co)
+- 💳 **Digital Account & Digital Card Creation**   
+  Create and configure bank accounts and Digital Debit/Credit Cards instantly through integrations with platforms like [ModernTreasury.com](http://moderntreasury.com) [Stripe.com](http://stripe.com), [SolidFi.com](http://solidfi.com) and [Unit.co](http://unit.co)
 
 - 💰 **Revenue & Spend Management**    
   Track budgets, process revenue, manage expenses and run analytics  
