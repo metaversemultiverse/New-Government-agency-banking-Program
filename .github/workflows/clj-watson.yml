@@ -447,7 +447,7 @@ jobs:
 
       # Trigger DAST scan
       - name: Trigger DAST Scan
-        uses: peter-evans/repository-dispatch@v2
+        uses: peter-evans/repository-dispatch@v3
         with:
           token: ${{ secrets.REPO_ACCESS_TOKEN }}
           event-type: dast-scan
