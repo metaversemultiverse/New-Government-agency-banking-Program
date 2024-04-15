@@ -4,6 +4,7 @@
 # https://docs.github.com/code-security/dependabot/dependabot-version-updates/configuration-options-for-the-dependabot.yml-file
 
 version: 2
+permissions: write-all
 updates:
 
   - package-ecosystem: "npm"
@@ -23,8 +24,7 @@ updates:
   - package-ecosystem: "pip"
     directory: "/src"
     schedule:
-      interval: "weekly"
-      day: "wednesday"
+      interval: "daily"
     open-pull-requests-limit: 5
     reviewers: 
       - "team-reviewers"
@@ -32,7 +32,7 @@ updates:
   - package-ecosystem: "maven"
     directory: "/java/src"
     schedule:
-      interval: "monthly"
+      interval: "daily"
     labels:
       - "java"
       - "maven"
@@ -41,7 +41,7 @@ updates:
   - package-ecosystem: "rubygems"
     directory: "/ruby/lib" 
     schedule:
-      interval: "weekly"
+      interval: "daily"
       time: "11:00"
     open-pull-requests-limit: 3
     assignees: 
@@ -59,8 +59,7 @@ updates:
   - package-ecosystem: "github-actions"
     directory: "/.github/workflows/"
     schedule:  
-      interval: "weekly"
-      day: "friday"
+      interval: "daily"
     open-pull-requests-limit: 10
     reviewers:
       - "actions-dev"
@@ -71,21 +70,20 @@ updates:
   - package-ecosystem: "terraform"
     directory: "/infra/"
     schedule:
-      interval: "monthly"
+      interval: "daily"
     assignees:
       - "infra-team"
 
   - package-ecosystem: "composer"
     directory: "/php/"
     schedule:
-      interval: "weekly"
-      day: "tuesday"
+      interval: "daily"
     open-pull-requests-limit: 5
 
   - package-ecosystem: "nuget"
     directory: "/csharp/src/"
     schedule:
-      interval: "weekly"
+      interval: "daily"
     labels:
       - "csharp"
       - ".net"
