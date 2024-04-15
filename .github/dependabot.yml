@@ -1,89 +1,63 @@
-# To get started with Dependabot version updates, you'll need to specify which
-# package ecosystems to update and where the package manifests are located.
-# Please see the documentation for all configuration options:
-# https://docs.github.com/code-security/dependabot/dependabot-version-updates/configuration-options-for-the-dependabot.yml-file
-
 version: 2
-permissions: write-all
 updates:
-
   - package-ecosystem: "npm"
-    directory: "/"
+    directory: "/frontend"
     schedule:
       interval: "daily"
       time: "10:00"
       timezone: "America/New_York"
-      day: "monday"
-    open-pull-requests-limit: 10
+    open-pull-requests-limit: 5
     target-branch: "develop"
     assignees:
-      - "octocat"
+      - "frontend-team"
     labels:
+      - "frontend"
       - "dependencies"
 
   - package-ecosystem: "pip"
-    directory: "/src"
+    directory: "/backend"
     schedule:
       interval: "daily"
+      time: "12:00"
+      timezone: "America/New_York"
     open-pull-requests-limit: 5
-    reviewers: 
-      - "team-reviewers"
-
-  - package-ecosystem: "maven"
-    directory: "/java/src"
-    schedule:
-      interval: "daily"
+    reviewers:
+      - "backend-team"
     labels:
-      - "java"
-      - "maven"
-    milestone: "sprint-15"
-
-  - package-ecosystem: "rubygems"
-    directory: "/ruby/lib" 
-    schedule:
-      interval: "daily"
-      time: "11:00"
-    open-pull-requests-limit: 3
-    assignees: 
-      - "ruby-dev"
+      - "backend"
+      - "dependencies"
 
   - package-ecosystem: "docker"
     directory: "/"
     schedule:
-      interval: "daily"
-      time: "03:00"
+      interval: "weekly"
+      day: "monday"
+      time: "09:00"
+      timezone: "America/New_York"
     labels:
       - "docker"
-      - "container"
+      - "infrastructure"
 
   - package-ecosystem: "github-actions"
-    directory: "/.github/workflows/"
-    schedule:  
-      interval: "daily"
-    open-pull-requests-limit: 10
+    directory: "/.github/workflows"
+    schedule:
+      interval: "monthly"
+    open-pull-requests-limit: 3
     reviewers:
-      - "actions-dev"
+      - "devops-team"
     labels:
-      - "actions"
-      - "workflows"
+      - "github-actions"
+      - "ci-cd"
 
   - package-ecosystem: "terraform"
-    directory: "/infra/"
-    schedule:
-      interval: "daily"
+    directory: "/infrastructure"
+    schedule: 
+      interval: "weekly"
+      day: "tuesday"
+      time: "14:00"
+      timezone: "America/New_York"
     assignees:
-      - "infra-team"
-
-  - package-ecosystem: "composer"
-    directory: "/php/"
-    schedule:
-      interval: "daily"
-    open-pull-requests-limit: 5
-
-  - package-ecosystem: "nuget"
-    directory: "/csharp/src/"
-    schedule:
-      interval: "daily"
+      - "infrastructure-team"
     labels:
-      - "csharp"
-      - ".net"
+      - "infrastructure"
+      - "terraform"
